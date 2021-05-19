@@ -20,6 +20,7 @@ body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   position: relative;
+  background-color: #f2f2f2;
 }
 
 footer {
@@ -68,14 +69,14 @@ footer {
 .previewContainer .card__title {
   font-family: "Big Shoulders Display", cursive;
   text-transform: uppercase;
-  font-size: 2.1em;
+  font-size: 2.3em;
   font-weight: 700;
 }
 
 .previewContainer .card__text {
   color: rgba(255, 255, 255, 0.75);
   padding-bottom: 3em;
-  line-height: 1.6em;
+  line-height: 1.8em;
 }
 
 .previewContainer .card__button a {
@@ -90,7 +91,7 @@ footer {
   font-weight: 400;
   font-size: 1em;
   mix-blend-mode: screen;
-  padding: 1em 2.3em;
+  padding: 0.7em 2.3em;
   border: 2px solid #f2f2f2;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;

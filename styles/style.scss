@@ -1,0 +1,143 @@
+/*===== VARIABLES AND IMPORTS =====*/
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$text-color: hsla(0, 0%, 100%, 0.75);
+$accent-color: hsl(0, 0%, 95%);
+
+/*Fonts import: Lexent Deca (400) - Big Shoulders Display (700)*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$font-lexend-deca: "Lexend Deca", sans-serif;
+$font-big-shoulders: "Big Shoulders Display", cursive;
+
+/* Responsive breakpoints: */
+$mobile: 800px;
+
+/*===== INITIALIZATION =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-family: $font-lexend-deca;
+  font-size: 15px;
+  position: relative;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  margin: 0 auto;
+}
+
+/*===== STYLES =====*/
+
+.previewContainer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 920px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 21.25vh;
+  border-radius: 7px;
+  overflow: hidden;
+
+  .card {
+    color: $accent-color;
+    height: 100%;
+    width: 100%;
+    padding: 3.3em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2.6em;
+
+    /*----- CARD ELEMENTS STYLE -----*/
+    &__title {
+      font-family: $font-big-shoulders;
+      text-transform: uppercase;
+      font-size: 2.1em;
+      font-weight: 700;
+    }
+
+    &__text {
+      color: $text-color;
+      padding-bottom: 3em;
+      line-height: 1.6em;
+    }
+
+    &__button {
+      a {
+        background-color: #fff;
+        text-decoration: none;
+        width: fit-content;
+        border-radius: 100px;
+        text-transform: capitalize;
+        // color must be black for background to completely show through, also works as fallback text color for IE and older browsers
+        color: #000;
+        font-weight: 400;
+        font-size: 1em;
+        // Blend mode on screen with black to see throught the bg color:
+        mix-blend-mode: screen;
+        padding: 1em 2.3em;
+
+        border: 2px solid $accent-color; //Setting the border so the buttn just fade on hover
+        transition-duration: 0.2s; //Add smoothness to the hover effect
+
+        &:hover {
+          color: $accent-color;
+          background-color: transparent;
+        }
+      }
+    }
+
+    /*----------*/
+
+    /*Cards background colors: */
+    &:nth-child(1) {
+      background-color: $bright-orange;
+    }
+
+    &:nth-child(2) {
+      background-color: $dark-cyan;
+    }
+
+    &:nth-child(3) {
+      background-color: $very-dark-cyan;
+    }
+  }
+}
+
+/* == Responsive */
+
+@media screen and (max-width: $mobile) {
+  body {
+    height: fit-content;
+    padding: 85px 0;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.7em;
+  }
+  .previewContainer {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, auto);
+    height: fit-content;
+    width: 86%;
+    top: 0;
+  }
+}

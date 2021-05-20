@@ -69,13 +69,13 @@ footer {
 .previewContainer .card__title {
   font-family: "Big Shoulders Display", cursive;
   text-transform: uppercase;
-  font-size: 2.3em;
+  font-size: 3em;
   font-weight: 700;
 }
 
 .previewContainer .card__text {
   color: rgba(255, 255, 255, 0.75);
-  padding-bottom: 3em;
+  padding-bottom: 2.85em;
   line-height: 1.8em;
 }
 
@@ -91,7 +91,7 @@ footer {
   font-weight: 400;
   font-size: 1em;
   mix-blend-mode: screen;
-  padding: 0.7em 2.3em;
+  padding: 0.6em 2.3em;
   border: 2px solid #f2f2f2;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;

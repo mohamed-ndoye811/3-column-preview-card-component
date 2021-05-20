@@ -69,13 +69,13 @@ footer {
     &__title {
       font-family: $font-big-shoulders;
       text-transform: uppercase;
-      font-size: 2.3em;
+      font-size: 3em;
       font-weight: 700;
     }
 
     &__text {
       color: $text-color;
-      padding-bottom: 3em;
+      padding-bottom: 2.85em;
       line-height: 1.8em;
     }
 
@@ -92,7 +92,7 @@ footer {
         font-size: 1em;
         // Blend mode on screen with black to see throught the bg color:
         mix-blend-mode: screen;
-        padding: 0.7em 2.3em;
+        padding: 0.6em 2.3em;
 
         border: 2px solid $accent-color; //Setting the border so the buttn just fade on hover
         transition-duration: 0.2s; //Add smoothness to the hover effect
